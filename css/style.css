@@ -1,0 +1,164 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+body{
+  margin: auto 15px;
+  background: rgb(32, 32, 35);
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.top{
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+
+.tables{
+  text-align: center;
+  margin: 10px auto;
+}
+
+.middle{
+  text-align: center;
+  border-top: 1px solid white;
+  margin-top: 30px;
+}
+
+.camera-table{
+  margin-bottom: 50px;
+}
+
+.bottom{
+  text-align: center;
+}
+
+.rover-fax{
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+
+.rover-fax section{
+  margin-bottom: 40px;
+}
+
+.rover-fax img{
+  width: 300px;
+}
+
+.rover-fax p, .tables p, .middle p{
+  width: 75%;
+  display: inline-block;
+  text-align: center;
+}
+
+a{
+  color: white;
+}
+footer{
+  clear: both;
+}
+
+/* main{
+  text-align: center;
+}
+
+h1{
+  text-align: center;
+}
+
+.camera-table{
+  margin-bottom: 50px;
+}
+
+.camera-table, .date-table{
+  text-align: center;
+}
+
+.tables{
+  margin: 0 auto;
+  display: flex;
+}
+*/
+
+img{
+  display: block;
+  margin: 15px auto;
+  width: 100%;
+}
+
+ul li{
+  width: 30%;
+  float: left;
+  margin-left: 10px;
+}
+
+li{
+  list-style: none;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 5px auto;
+  padding: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.65);
+}
+
+.change-view{
+  display: flex;
+  flex-direction: column;
+}
+
+.change-view img{
+  width: 80%;
+}
+
+.change-view li{
+  flex: 1;
+  width: 75%;
+}
+/*
+nav{
+  text-align: center;
+} */
+
+/* table */
+table{
+  border: 2px solid white;
+  width: 50%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  text-align: center;
+}
+
+td{
+  border: 2px solid white;
+}
+
+tr{
+  border: 2px solid white;
+}
+
+th{
+  border-bottom: 2px solid white;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media all and (max-width: 450px) {
+  .top{
+    height: 200px;
+  }
+}
