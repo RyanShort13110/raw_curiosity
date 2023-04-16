@@ -66,10 +66,9 @@ This app was designed to help the general public view photos from Martian rovers
 The majority of the photos you will see have never been viewed by anyone outside of NASA.
 <br>
 <br>
-Via the use of dropdown menus, the user may select a rover (either Curiosity, Opportunity, or Spirit), select a camera on the rover (either Mast, Navigational Camera, Front Hazard Avoidance, Rear Hazard Avoidance, or Panoramic, and select a particular date.<br>
+Via the use of dropdown menus, the user may select a rover (either Curiosity, Opportunity, or Spirit), select a camera on the rover (either Mast, Navigational Camera, Front Hazard Avoidance, Rear Hazard Avoidance, or Panoramic), and select a particular date.<br>
 <br>
-Included are tables to help narrow down the search by date range. These are not gauranteed, they are<br>
-simply rough estimates of the durration each rover was/is active.<br>
+Included are tables to help narrow down the search by date range. These are not gauranteed, they are simply rough estimates of the durration each rover was/is active.<br>
 <br>
 
 ---
