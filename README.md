@@ -44,9 +44,8 @@ View photos the general public has never seen from the Curiosity, Opportunity, a
 <!-- ABOUT THE PROJECT -->
 ## About
 
-Simple app designed to help the general public see photos from three rovers currently on mars.<br>
-App allows the user to select from three different rovers: Curiosity, Opportunity, and Spirit<br>
-As well as allowing the user to adjust different rover camera configurations including Front hazard, Rear Hazard, Mast, etc. 
+Simple app designed to help the general public see photos from three rovers currently on mars.
+App allows the user to select from three different rovers: Curiosity, Opportunity, and Spirit, as well as allowing the user to adjust different rover camera configurations including Front Hazard, Rear Hazard, Mast, etc. 
 
 ---
 This app is hosted with Netlify.
@@ -63,12 +62,11 @@ This app is hosted with Netlify.
 <!-- USAGE EXAMPLES -->
 ## Usage and Docs
 
-This app was designed to help the general public view photos from Martian rovers.<br>
-The majority of the photos you will see have never been viewed by anyone outside of NASA.<br>
+This app was designed to help the general public view photos from Martian rovers. 
+The majority of the photos you will see have never been viewed by anyone outside of NASA.
 <br>
-Via the use of dropdown menus, the user may select a rover (either Curiosity, Opportunity, or Spirit),<br>
-select a camera on the rover (either Mast, Navigational Camera, Front Hazard Avoidance, Rear Hazard Avoidance, or Panoramic),<br>
-and select a particular date.<br>
+<br>
+Via the use of dropdown menus, the user may select a rover (either Curiosity, Opportunity, or Spirit), select a camera on the rover (either Mast, Navigational Camera, Front Hazard Avoidance, Rear Hazard Avoidance, or Panoramic, and select a particular date.<br>
 <br>
 Included are tables to help narrow down the search by date range. These are not gauranteed, they are<br>
 simply rough estimates of the durration each rover was/is active.<br>
@@ -163,7 +161,7 @@ simply rough estimates of the durration each rover was/is active.<br>
 <!-- CONTACT -->
 ## Contact
 
-Ryan - ryanshort.webdev@gmail.com
+Ryan - ryanshort.dev@gmail.com
 
 Project Link: [Raw Curiosity](https://rawcuriosity.netlify.app/)
 
