@@ -7,11 +7,10 @@ View photos the general public has never seen from the Curiosity, Opportunity, a
 
 <br />
 
-<h3 align="center">Unofficial DBZ API</h3>
+<h3 align="center">Raw Curiosity</h3>
 
 <div align="center">
     <img src="https://github.com/RyanShort13110/raw_curiosity/blob/main/raw-curiosity-ani.gif" alt="Logo" width="300">
-    </a>
 </div>
 
 <div>
