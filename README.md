@@ -1,5 +1,5 @@
 # Raw Curiosity
-View photos the general public has never seen from the Curiosity, Opportunity, and Spirit rovers currently on mars.
+View photos the general public has most likely never seen from the Curiosity, Opportunity, and Spirit rovers currently on mars.
 
 <div id="top"></div>
 
