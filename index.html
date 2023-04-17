@@ -6,28 +6,33 @@
       name="description"
       content="view raw curiosity rover photos from mars"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
     <meta name="keywords" content="one, two, three" />
-    <title>Raw Curiosity | Raw Martian Images</title>
+    <title>Raw Curiosity | Raw Mars Images</title>
     <!-- external CSS link -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <main>
       <section class="top">
         <h1>Raw Curiosity</h1>
         <p>
-          View raw photographs taken by Curiosity, Opportunity, and Spirit
+          View thousands of raw photos taken by the Curiosity, Opportunity, and Spirit
           rovers.
         </p>
       </section>
 
       <section class="rover-fax">
-        <h3>But first, some facts about each rover.</h3>
+        <h2>Rover Info</h2>
         <section class="curiosity-fax">
           <h2>Curiosity</h2>
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Curiosity_Self-Portrait_at_%27Big_Sky%27_Drilling_Site.jpg/260px-Curiosity_Self-Portrait_at_%27Big_Sky%27_Drilling_Site.jpg"
+            src="https://s3.amazonaws.com/digitaltrends-uploads-prod/2018/01/Curiousity-Rover-selfie.jpg"
             alt=""
           />
           <p>
@@ -50,7 +55,7 @@
         <section class="opportunity-fax">
           <h2>Opportunity</h2>
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/NASA_Mars_Rover.jpg/260px-NASA_Mars_Rover.jpg"
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP._X4TrcYOg0lE2gXTXqdONwHaF7%26pid%3DApi&f=1&ipt=3bbccbd71611b6754ab4bdcd813f251b259ac051f60d0aefb70832d26a6d341c&ipo=images"
             alt=""
           />
           <p>
@@ -71,10 +76,10 @@
             rover had traveled a distance of 45.16 kilometers.
           </p>
         </section>
-        <section>
+        <section class="spirit-fax">
           <h2>Spirit</h2>
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/KSC-03PD-0786.jpg/260px-KSC-03PD-0786.jpg"
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.explicit.bing.net%2Fth%3Fid%3DOIP.pECmPJpyAyLnhCUNMTamMwHaF6%26pid%3DApi&f=1&ipt=11ff4640b2bcb95a704a589b93cbcbcd634eb1a2bfc495cf6ceb3502224278a2&ipo=images"
             alt=""
           />
           <p>
@@ -104,9 +109,9 @@
             This table displays the different camera configurations for each
             rover.
           </p>
-          <table>
+          <table class="top-table">
             <thead>
-              <th>Camera Capabilities</th>
+              <th>Cameras</th>
               <th>Curiosity</th>
               <th>Opportunity</th>
               <th>Spirit</th>
@@ -184,13 +189,16 @@
 
       <section class="middle">
         <h3>
-          Use the following dropdown menus to search for raw rover photos.
+          Use the following dropdown menus to search for rover photos.
         </h3>
-        <p>Adjust dropdown menus to filter by rover, camera, and dates. If you don't know what to look for, start by simply changing to date to yesterday and hit "Get photos"!</p>
-        <p>* Be aware that photos may not always be available for every day and <strong>it may take a moment to load the photos!</strong></p>
+        <p>Adjust dropdown menus to filter by rover, camera, and dates.</p>
+        <p>
+          If you don't know what to look for, start by simply changing the date to yesterday and hit "Get photos". Try testing out different cameras for each day!
+        </p>
+        <p>* Be aware that photos may not always be available for every day and it may take a moment to load the photos!</p>
         <p><strong>You must select a date!</strong></p>
         <nav>
-          <form action="post">
+          <form class="dropdowns" action="post">
             <label for="rover">Rover:</label>
             <select name="rover" id="rover">
               <option value="curiosity">Curiosity</option>
@@ -215,10 +223,10 @@
       </section>
 
       <section class="bottom">
-        <h2 class="show-error"></h2>
+        <h2 class="rover-name"></h2>
         <h3 class="cam-type"></h3>
-        <button class="toggle-view">Change Photo Layout</button>
-        <ul>
+        <button class="toggle-view hidden">Change Photo Layout</button>
+        <ul class="image-list">
           <!-- Imgs -->
         </ul>
       </section>
@@ -226,7 +234,15 @@
     
 
     <footer>
-      <span>Assembled by: <a href="https://ryanshort.dev">Ryan</a></span>
+      <section>
+        <p>Built by: <a href="https://ryanshort.dev">Ryan</a></p>
+        <p>
+          Github repo: 
+          <a href="https://github.com/RyanShort13110/raw_curiosity"
+            ><i class="fa fa-github" id="githubLogo"></i
+          ></a>
+        </p>
+    </section>
     </footer>
 
     <script type="text/javascript" src="js/main.js"></script>

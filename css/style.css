@@ -11,11 +11,25 @@
 /* LAYOUT
 /*******************************************/
 
+.hidden{
+  display: none;
+}
+
 body{
-  margin: auto 15px;
+  margin: auto 10px;
   background: rgb(32, 32, 35);
   color: white;
   font-family: 'Courier New', Courier, monospace;
+}
+
+button{
+  background: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 4px;
+  color: white;
+  cursor: pointer;
+  width: 200px;
 }
 
 .top{
@@ -34,6 +48,16 @@ body{
   text-align: center;
   border-top: 1px solid white;
   margin-top: 30px;
+  background-color: aliceblue;
+  color: black;
+}
+
+.middle button{
+  display: inline-block;
+  border: 2px solid black;
+  color: black;
+  height: 40px;
+  margin: 15px auto;
 }
 
 .camera-table{
@@ -55,6 +79,11 @@ body{
 
 .rover-fax img{
   width: 300px;
+  border-radius: 10px;
+}
+
+.rover-fax h3{
+  margin: 75px auto;
 }
 
 .rover-fax p, .tables p, .middle p{
@@ -68,6 +97,31 @@ a{
 }
 footer{
   clear: both;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#githubLogo{
+  font-size: 30px;
+}
+
+.curiosity-fax{
+  background-color: aliceblue;
+  color: black;
+}
+
+.spirit-fax{
+  background-color: aliceblue;
+  color: black;
+}
+
+
+.dropdowns{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: 0 auto;
 }
 
 /* main{
@@ -107,10 +161,12 @@ ul li{
 li{
   list-style: none;
   border: 2px solid black;
+  background-color: aliceblue;
+  color: black;
   border-radius: 10px;
   margin: 5px auto;
   padding: 15px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.65);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.65);
 }
 
 .change-view{
@@ -153,12 +209,81 @@ th{
 }
 
 
+/* .curiosity-fax{
+  display: flex;
+}
+
+.opportunity-fax{
+  display: flex;
+}
+
+.spirit-fax{
+  display: flex;
+} */
+
+/* grid layout */
+
+.curiosity-fax, .opportunity-fax, .spirit-fax{
+  height: auto;
+  display: grid;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-template-rows: repeat(10%, auto);
+}
+
+.curiosity-fax img{
+  grid-column: 1 / span 4;
+  grid-row: 2;
+}
+
+.curiosity-fax p{
+  grid-column: 6 /span 10;
+  grid-row: 2;
+}
+
+.curiosity-fax h2, .spirit-fax h2{
+  grid-column: 2;
+}
+.opportunity-fax h2{
+  grid-column: 8;
+}
+
+
+.opportunity-fax img{
+  grid-column: 6 /span 10;
+  grid-row: 2;
+}
+
+.opportunity-fax p{
+  grid-column: 2 /span 5;
+  grid-row: 2;
+}
+.spirit-fax img{
+  grid-column: 1 / span 4;
+  grid-row: 2;
+}
+
+.spirit-fax p{
+  grid-column: 6 /span 10;
+  grid-row: 2;
+}
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
 
-@media all and (max-width: 450px) {
+@media all and (max-width: 480px) {
   .top{
-    height: 200px;
+    height: 150px;
+  }
+
+  .dropdowns{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 850px) {
+  .rover-fax *{
+    display: block;
   }
 }
