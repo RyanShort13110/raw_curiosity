@@ -20,11 +20,12 @@
   <body>
     <main>
       <section class="top">
+        <!-- add more content around here -->
         <h1>Raw Curiosity</h1>
-        <p>
+        <h2>
           View thousands of raw photos taken by the Curiosity, Opportunity, and Spirit
           rovers.
-        </p>
+        </h2>
       </section>
 
       <section class="rover-fax">
@@ -152,7 +153,7 @@
         <section class="date-table">
           <h4>Date Ranges</h4>
           <p>
-            This table displays useful date ranges to help narrow your search
+            This table displays date ranges to help narrow your search
             for cool photos.
           </p>
           <table>
@@ -193,12 +194,16 @@
         </h3>
         <p>Adjust dropdown menus to filter by rover, camera, and dates.</p>
         <p>
-          If you don't know what to look for, start by simply changing the date to yesterday and hit "Get photos". Try testing out different cameras for each day!
+          If you're not sure what to look for, start by simply changing the date to yesterday and hit "Get photos". Try testing out different cameras for each day!
         </p>
-        <p>* Be aware that photos may not always be available for every day and it may take a moment to load the photos!</p>
-        <p><strong>You must select a date!</strong></p>
+        <p>
+          * Be aware that photos may not always be available for every day and it may take a moment to load the photos!
+        </p>
+        <p><strong>You must select a date.</strong></p>
         <nav>
           <form class="dropdowns" action="post">
+            <label for="date-select">Date:</label>
+            <input type="date" name="date-select" value="" />
             <label for="rover">Rover:</label>
             <select name="rover" id="rover">
               <option value="curiosity">Curiosity</option>
@@ -213,8 +218,6 @@
               <option value="mast">Mast</option>
               <option value="pancam">Panoramic Camera</option>
             </select>
-            <label for="date-select">Date:</label>
-            <input type="date" name="date-select" value="" />
             <button class="make-fetch" type="button" name="button">
               Get photos
             </button>
@@ -226,6 +229,7 @@
         <h2 class="rover-name"></h2>
         <h3 class="cam-type"></h3>
         <button class="toggle-view hidden">Change Photo Layout</button>
+        <button onclick="topFunction()" class="hide-button" id="myBtn" title="Go to top">Back to search</button> 
         <ul class="image-list">
           <!-- Imgs -->
         </ul>

@@ -32,11 +32,27 @@ button{
   width: 200px;
 }
 
+.toggle-view:hover{
+  background-color: rgb(143, 142, 142);
+}
+
 .top{
   height: 100px;
   width: 100%;
   text-align: center;
   border-bottom: 1px solid white;
+}
+
+.top h1{
+  text-align: left;
+  margin-left: 25px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.top h2{
+  font-size: 16px;
+  font-weight: 100;
 }
 
 .tables{
@@ -60,6 +76,10 @@ button{
   margin: 15px auto;
 }
 
+.middle button:hover{
+  background: rgb(193, 226, 255);
+}
+
 .camera-table{
   margin-bottom: 50px;
 }
@@ -70,7 +90,6 @@ button{
 
 .rover-fax{
   text-align: center;
-  border-bottom: 1px solid white;
 }
 
 .rover-fax section{
@@ -124,28 +143,6 @@ footer{
   margin: 0 auto;
 }
 
-/* main{
-  text-align: center;
-}
-
-h1{
-  text-align: center;
-}
-
-.camera-table{
-  margin-bottom: 50px;
-}
-
-.camera-table, .date-table{
-  text-align: center;
-}
-
-.tables{
-  margin: 0 auto;
-  display: flex;
-}
-*/
-
 img{
   display: block;
   margin: 15px auto;
@@ -182,10 +179,6 @@ li{
   flex: 1;
   width: 75%;
 }
-/*
-nav{
-  text-align: center;
-} */
 
 /* table */
 table{
@@ -209,17 +202,27 @@ th{
 }
 
 
-/* .curiosity-fax{
-  display: flex;
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background: aliceblue;
+  box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  color: black;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 14px;
 }
 
-.opportunity-fax{
-  display: flex;
+#myBtn:hover {
+  background-color: rgb(138, 154, 168);
+  border: 1px solid rgb(138, 154, 168);
 }
-
-.spirit-fax{
-  display: flex;
-} */
 
 /* grid layout */
 
@@ -279,6 +282,10 @@ th{
   .dropdowns{
     display: flex;
     flex-direction: column;
+  }
+
+  .hide-button{
+    visibility: hidden;
   }
 }
 

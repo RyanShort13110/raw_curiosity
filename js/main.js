@@ -68,6 +68,8 @@ function getFetch() {
       // only show the "toggle view" button when there are li elements on the page
       if(document.querySelector('.cam-type').textContent != ''){
         document.querySelector('.toggle-view').classList.toggle('hidden')
+
+        window.onscroll = function() {scrollFunction()}; // activate scroll btn
       }
 
     })
@@ -81,3 +83,17 @@ function getFetch() {
 function toggleView() {
   document.querySelector("ul").classList.toggle("change-view")
 }
+
+function scrollFunction() {
+  const mybutton = document.querySelector('#myBtn')
+  if (document.body.scrollTop > 2500 || document.documentElement.scrollTop > 2500) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  let menus = document.querySelector('.middle')
+  menus.scrollIntoView({behavior: 'smooth'});
+} 
