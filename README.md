@@ -1,5 +1,5 @@
 # Raw Curiosity
-View photos the general public has never seen from the Curiosity, Opportunity, and Spirit rovers currently on mars.
+View photos the general public has likely never seen from the Curiosity, Opportunity, and Spirit rovers currently on mars.
 
 <div id="top"></div>
 
@@ -10,7 +10,7 @@ View photos the general public has never seen from the Curiosity, Opportunity, a
 <h3 align="center">Raw Curiosity</h3>
 
 <div align="center">
-    <img src="https://github.com/RyanShort13110/raw_curiosity/blob/main/raw-curiosity-ani.gif" alt="Logo" width="300">
+    <img src="https://github.com/RyanShort13110/raw_curiosity/blob/main/raw-curiosity-gif.gif" alt="Logo" width="400">
 </div>
 
 <div>
