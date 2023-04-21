@@ -44,8 +44,6 @@ button{
 }
 
 .top h1{
-  text-align: left;
-  margin-left: 25px;
   font-size: 20px;
   font-weight: bolder;
 }
@@ -149,10 +147,14 @@ img{
   width: 100%;
 }
 
+ul{
+  display: block;
+  padding: none;
+}
+
 ul li{
-  width: 30%;
+  width: 33.3333%;
   float: left;
-  margin-left: 10px;
 }
 
 li{
@@ -161,10 +163,16 @@ li{
   background-color: aliceblue;
   color: black;
   border-radius: 10px;
-  margin: 5px auto;
-  padding: 15px;
+  padding: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.65);
 }
+
+.image-list{
+  width: 100%;
+  padding: 0;
+}
+
+/* change view is done, elements now centered when change-view is active */
 
 .change-view{
   display: flex;
@@ -172,12 +180,13 @@ li{
 }
 
 .change-view img{
-  width: 80%;
+  width: 95%;
 }
 
 .change-view li{
-  flex: 1;
-  width: 75%;
+  margin: 0 auto;
+  width: 60%;
+  margin-bottom: 10px;
 }
 
 /* table */
@@ -279,6 +288,12 @@ th{
     height: 150px;
   }
 
+  ul li{
+    width: 50%;
+    padding: 5px;
+  }
+  
+
   .dropdowns{
     display: flex;
     flex-direction: column;
@@ -292,5 +307,13 @@ th{
 @media all and (max-width: 850px) {
   .rover-fax *{
     display: block;
+  }
+
+  .change-view img{
+    width: 100%;
+  }
+  
+  .change-view li{
+    width: 90%;
   }
 }
