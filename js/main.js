@@ -49,8 +49,15 @@ function getFetch() {
       document.querySelector(".cam-type").textContent = camName
       document.querySelector(".rover-name").textContent = roverName
 
+      // if "li" elements are on the page, display the "change layout" button and activate the "return to search" button
+      if(document.querySelector('.cam-type').textContent != ''){
+        document.querySelector('.toggle-view').classList.remove('hidden')
+
+        window.onscroll = function() {scrollFunction()}
+      }
+
       // the forEach creates and adds images and their ids to the dom as "li" elements
-      data.photos.forEach((el, i) => {
+      data.photos.forEach(el => {
         let marsPics = el["img_src"]
         let liElm = document.createElement("li")
         let roverPic = document.createElement("img")
@@ -64,14 +71,6 @@ function getFetch() {
         liElm.appendChild(roverPic)
         document.querySelector("ul").appendChild(liElm)
       })
-
-      // only show the "toggle view" button when there are li elements on the page
-      if(document.querySelector('.cam-type').textContent != ''){
-        document.querySelector('.toggle-view').classList.toggle('hidden')
-
-        window.onscroll = function() {scrollFunction()}; // activate scroll btn
-      }
-
     })
     .catch((err) => {
       console.log(`error: ${err}`)
@@ -80,20 +79,20 @@ function getFetch() {
     })
 }
 
-function toggleView() {
+function toggleView(){
   document.querySelector("ul").classList.toggle("change-view")
 }
 
-function scrollFunction() {
+function scrollFunction(){
   const mybutton = document.querySelector('#myBtn')
-  if (document.body.scrollTop > 2500 || document.documentElement.scrollTop > 2500) {
+  if (document.body.scrollTop > 2500 || document.documentElement.scrollTop > 2500){
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
   }
 }
 
-function topFunction() {
+function topFunction(){
   let menus = document.querySelector('.middle')
   menus.scrollIntoView({behavior: 'smooth'});
 } 

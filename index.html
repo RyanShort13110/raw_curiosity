@@ -6,12 +6,15 @@
       name="description"
       content="view raw curiosity rover photos from mars"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
-    <meta name="keywords" content="one, two, three" />
+    <meta 
+      name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" 
+    />
+    <meta name="keywords" content="Mars Rover Photos" />
     <title>Raw Curiosity | Raw Mars Images</title>
     <!-- external CSS link -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="surreal_landscape.ico" type="image/x-icon">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -20,7 +23,6 @@
   <body>
     <main>
       <section class="top">
-        <!-- add more content around here -->
         <h1>Raw Curiosity</h1>
         <h2>
           View thousands of raw photos taken by the Curiosity, Opportunity, and Spirit
@@ -29,7 +31,7 @@
       </section>
 
       <section class="rover-fax">
-        <h2>Rover Info</h2>
+        <h2 class="rover-info">Info about our featured rovers</h2>
         <section class="curiosity-fax">
           <h2>Curiosity</h2>
           <img
@@ -124,14 +126,14 @@
               <td></td>
             </tr>
             <tr>
-              <th>Navigation Camera</th>
-              <td>✔</td>
+              <th>Panoramic Camera</th>
+              <td></td>
               <td>✔</td>
               <td>✔</td>
             </tr>
             <tr>
-              <th>Panoramic Camera</th>
-              <td></td>
+              <th>Navigation Camera</th>
+              <td>✔</td>
               <td>✔</td>
               <td>✔</td>
             </tr>
@@ -186,18 +188,13 @@
         </section>
       </section>
 
-      <!-- add choice selector for camera: obtain the value of each to update the api search on click -->
-
       <section class="middle">
         <h3>
           Use the following dropdown menus to search for rover photos.
         </h3>
         <p>Adjust dropdown menus to filter by rover, camera, and dates.</p>
         <p>
-          If you're not sure what to look for, start by simply changing the date to yesterday and hit "Get photos". Try testing out different cameras for each day!
-        </p>
-        <p>
-          * Be aware that photos may not always be available for every day and it may take a moment to load the photos!
+          If you're not sure where to start, try changing the date to yesterday and hit "Get photos". Test out different cameras for each day!
         </p>
         <p><strong>You must select a date.</strong></p>
         <nav>
@@ -215,7 +212,7 @@
               <option value="navcam">Navigational Camera</option>
               <option value="fhaz">Front Hazard Avoidance</option>
               <option value="rhaz">Rear Hazard Avoidance</option>
-              <option value="mast">Mast</option>
+              <option value="mast">Mast Camera</option>
               <option value="pancam">Panoramic Camera</option>
             </select>
             <button class="make-fetch" type="button" name="button">
@@ -223,6 +220,9 @@
             </button>
           </form>
         </nav>
+        <p>
+          * Photos may not always be available for every day and they may take a moment to load.
+        </p>
       </section>
 
       <section class="bottom">
@@ -236,7 +236,6 @@
       </section>
     </main>
     
-
     <footer>
       <section>
         <p>Built by: <a href="https://ryanshort.dev">Ryan</a></p>
