@@ -84,7 +84,7 @@ function toggleView(){
 }
 
 function scrollFunction(){
-  const mybutton = document.querySelector('#myBtn')
+  const mybutton = document.querySelector('#scroll-btn')
   if (document.body.scrollTop > 2500 || document.documentElement.scrollTop > 2500){
     mybutton.style.display = "block";
   } else {

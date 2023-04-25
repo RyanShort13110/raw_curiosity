@@ -209,7 +209,7 @@ td, tr{
 }
 
 /* "back to search" button */
-#myBtn {
+#scroll-btn {
   display: none;
   position: fixed;
   bottom: 30px;
@@ -226,7 +226,7 @@ td, tr{
   font-size: 14px;
 }
 
-#myBtn:hover {
+#scroll-btn:hover {
   background-color: rgb(138, 154, 168);
   border: 1px solid rgb(138, 154, 168);
 }
