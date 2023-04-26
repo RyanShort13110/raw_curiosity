@@ -3,7 +3,7 @@
 document.querySelector(".make-fetch").addEventListener("click", getFetch)
 document.querySelector(".toggle-view").addEventListener("click", toggleView)
 
-function getFetch() {
+function getFetch(){
   document.querySelector("ul").textContent = "" // clear these on new search
   document.querySelector(".rover-name").textContent = ""
   document.querySelector(".cam-type").textContent = ""
