@@ -45,7 +45,7 @@ View photos the general public has likely never seen from the Curiosity, Opportu
 ## About
 
 Simple app designed to help the general public see photos from three rovers currently on mars.
-App allows the user to select from three different rovers: Curiosity, Opportunity, and Spirit, as well as allowing the user to adjust different rover camera configurations including Front Hazard, Rear Hazard, Mast, etc. Photos now store in localStorage for a duration of 24 hours before being removed. This will reduce the number of API calls for repeated searches on a given day.
+App allows the user to select from three different rovers: Curiosity, Opportunity, and Spirit, as well as allowing the user to adjust different rover camera configurations including Front Hazard, Rear Hazard, Mast, etc. Photos now store in localStorage for a duration of 5 hours before being removed. This will reduce the number of API calls for repeated searches on a given day.
 
 ---
 This app is hosted with Netlify.
@@ -68,7 +68,7 @@ The majority of the photos you will see have never been viewed by anyone outside
 <br>
 Via the use of dropdown menus, the user may select a rover (either Curiosity, Opportunity, or Spirit), select a camera on the rover (either Mast, Navigational Camera, Front Hazard Avoidance, Rear Hazard Avoidance, or Panoramic), and select a particular date.<br>
 <br>
-Photos will be stored in localStorage as an array of objects and will persist for 24 hours before being automatically removed in order to reduce the number of API calls going to the server.<br>
+Photos will be stored in localStorage as an array of objects and will persist for 5 hours before being automatically removed in order to reduce the number of API calls going to the server for repeated search queries.<br>
 <br>
 Included are tables to help narrow down the search by date range. These are not gauranteed, they are simply rough estimates of the durration each rover was/is active.<br>
 <br>
@@ -112,15 +112,15 @@ Included are tables to help narrow down the search by date range. These are not 
     <td></td>
     <td></td>
   </tr>
-  <tr>
-    <th>Navigation Camera</th>
-    <td>✔</td>
+    <tr>
+    <th>Panoramic Camera</th>
+    <td></td>
     <td>✔</td>
     <td>✔</td>
   </tr>
   <tr>
-    <th>Panoramic Camera</th>
-    <td></td>
+    <th>Navigation Camera</th>
+    <td>✔</td>
     <td>✔</td>
     <td>✔</td>
   </tr>
