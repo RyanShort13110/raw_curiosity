@@ -41,11 +41,9 @@ function getFetch() {
     const { timestamp, data } = JSON.parse(cachedData)
     const now = Date.now()
   
-    if(now - timestamp < 86400000){ // check if cached data is less than 24 hours old
+    if(now - timestamp < 18000000){ // check if cached data is less than 5 hours old
       displayData(data)
       return
-    }else{
-      localStorage.removeItem(cacheKey) // remove cached data if it's older than 24 hours to save space
     }
   }
   
@@ -96,6 +94,20 @@ function displayData(data) {
     document.querySelector("ul").appendChild(liElm)
   })
 }
+
+function clearLocalStorage() {
+  const expirationTime = 18000000 // clears after 5 hours
+  const lastUpdated = localStorage.getItem("lastUpdated");
+  const currentTime = new Date().getTime();
+
+  if (lastUpdated && currentTime - lastUpdated > expirationTime) {
+    localStorage.clear();
+    console.log("localStorage cleared!");
+  }
+
+  localStorage.setItem("lastUpdated", currentTime);
+}
+clearLocalStorage()
 
 function toggleView(){
   document.querySelector("ul").classList.toggle("change-view")
