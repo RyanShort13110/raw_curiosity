@@ -96,7 +96,7 @@ function displayData(data) {
 
 // clear localStorage if 1 hour has elapsed since last search
 function clearLocalStorage() {
-  const expirationTime = 3600000 // 1 hour
+  const expirationTime = 3600000 // 1 hour in ms
   const lastUpdated = localStorage.getItem("lastUpdated");
   const currentTime = new Date().getTime();
 
