@@ -7,7 +7,6 @@ Add relevant data from API to the DOM such as:
 - camera the photo(s) were taken with (FHAZ, RHAZ, NAVCAM, etc.) ✔
 - photo id for each pic ✔
 
-
 More advanced things to add...
 - DOM api url manipulation to allow for the following...
   -) select different rovers (maybe with dropdown) ✔
@@ -22,18 +21,18 @@ document.querySelector(".make-fetch").addEventListener("click", getFetch)
 document.querySelector(".toggle-view").addEventListener("click", toggleView)
 
 function getFetch() {
-  document.querySelector("ul").textContent = "" // clear these on new search
+  document.querySelector("ul").textContent = "" // clear these 3 on new search
   document.querySelector(".rover-name").textContent = ""
   document.querySelector(".cam-type").textContent = ""
   const date = document.querySelector("input").value // get date
 
-  // changing api query parameters using DOM elements
-  const camChoice = document.getElementById("camera") // get "options" from the "select" elements
+  // change api query parameters using DOM elements
+  const camChoice = document.getElementById("camera")
   const roverChoice = document.getElementById("rover")
-  const roverCam = camChoice.options[camChoice.selectedIndex].value // get camera option value
-  const userRover = roverChoice.options[roverChoice.selectedIndex].value // get rover option value
+  const roverCam = camChoice.options[camChoice.selectedIndex].value
+  const userRover = roverChoice.options[roverChoice.selectedIndex].value
 
-  // check if the data is already in the cache
+  // add data to browser cache and check how log its been there
   const cacheKey = `${userRover}-${roverCam}-${date}`
   const cachedData = localStorage.getItem(cacheKey)
   
@@ -41,7 +40,7 @@ function getFetch() {
     const { timestamp, data } = JSON.parse(cachedData)
     const now = Date.now()
   
-    if(now - timestamp < 18000000){ // check if cached data is less than 5 hours old
+    if(now - timestamp < 3600000){ // if cached data is < 1 hour old
       displayData(data)
       return
     }
@@ -71,20 +70,20 @@ function displayData(data) {
   document.querySelector(".cam-type").textContent = camName
   document.querySelector(".rover-name").textContent = roverName
 
-  // if "li" elements are on the page, display the "change layout" button and activate the "return to search" button
-  if(document.querySelector('.cam-type').textContent != ''){
-    document.querySelector('.toggle-view').classList.remove('hidden')
+  // if "li" elements are on the page, display the "change layout" button & activate the "return to search" button
+  if(document.querySelector(".cam-type").textContent != ""){
+    document.querySelector(".toggle-view").classList.remove("hidden")
 
-    window.onscroll = () => scrollFunction();
+    window.onscroll = _ => scrollFunction();
   }
 
-  // the forEach creates and adds images and their ids to the dom as "li" elements
+  // forEach creates and adds images and their ids to the dom as "li" elements
   data.photos.forEach(el => {
+    let id = el.id
     let marsPics = el["img_src"]
     let liElm = document.createElement("li")
     let roverPic = document.createElement("img")
     let liText = document.createElement("span")
-    let id = el.id
 
     roverPic.src = marsPics
     liText.textContent = `Image ID: ${id}`
@@ -95,8 +94,9 @@ function displayData(data) {
   })
 }
 
+// clear localStorage if 1 hour has elapsed since last search
 function clearLocalStorage() {
-  const expirationTime = 18000000 // clears after 5 hours
+  const expirationTime = 3600000 // 1 hour
   const lastUpdated = localStorage.getItem("lastUpdated");
   const currentTime = new Date().getTime();
 
@@ -109,12 +109,15 @@ function clearLocalStorage() {
 }
 clearLocalStorage()
 
+// layout toggle function
 function toggleView(){
   document.querySelector("ul").classList.toggle("change-view")
 }
 
+// controlls when the "return to search" button appears. 
+// currently after 2500 pixels from the top. want to make this more fluid.
 function scrollFunction(){
-  const mybutton = document.querySelector('#scroll-btn')
+  const mybutton = document.querySelector("#scroll-btn")
   if (document.body.scrollTop > 2500 || document.documentElement.scrollTop > 2500){
     mybutton.style.display = "block";
   } else {
@@ -122,7 +125,8 @@ function scrollFunction(){
   }
 }
 
+// sets target & behavior for the scroll function
 function topFunction(){
-  let menus = document.querySelector('.middle')
-  menus.scrollIntoView({behavior: 'smooth'});
+  let menus = document.querySelector(".middle")
+  menus.scrollIntoView({behavior: "smooth"});
 } 
