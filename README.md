@@ -107,31 +107,31 @@ Included are tables to help narrow down the search by date range. These are not 
     <th>Spirit</th>
   </thead>
   <tr>
-    <th>Mast Camera</th>
+    <th>Mast</th>
     <td>✔</td>
     <td></td>
     <td></td>
   </tr>
     <tr>
-    <th>Panoramic Camera</th>
+    <th>Panoramic</th>
     <td></td>
     <td>✔</td>
     <td>✔</td>
   </tr>
   <tr>
-    <th>Navigation Camera</th>
+    <th>Navigation</th>
     <td>✔</td>
     <td>✔</td>
     <td>✔</td>
   </tr>
   <tr>
-    <th>Front Hazard Avoidance Camera</th>
+    <th>Front Hazard Avoidance</th>
     <td>✔</td>
     <td>✔</td>
     <td>✔</td>
   </tr>
   <tr>
-    <th>Rear Hazard Avoidance Camera</th>
+    <th>Rear Hazard Avoidance</th>
     <td>✔</td>
     <td>✔</td>
     <td>✔</td>
