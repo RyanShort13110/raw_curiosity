@@ -1,0 +1,22 @@
+{
+  "name": "mars-rover-photos",
+  "version": "1.0.0",
+  "description": "View photos the general public has likely never seen from the Curiosity, Opportunity, and Spirit rovers currently on mars.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyanShort13110/raw_curiosity.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyanShort13110/raw_curiosity/issues"
+  },
+  "homepage": "https://github.com/RyanShort13110/raw_curiosity#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

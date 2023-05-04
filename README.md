@@ -45,10 +45,10 @@ View photos the general public has likely never seen from the Curiosity, Opportu
 ## About
 
 Simple app designed to help the general public see photos from three rovers currently on mars.
-App allows the user to select from three different rovers: Curiosity, Opportunity, and Spirit, as well as allowing the user to adjust different rover camera configurations including Front Hazard, Rear Hazard, Mast, etc. Photos now store in localStorage for a duration of 5 hours before being removed. This will reduce the number of API calls for repeated searches on a given day.
+App allows the user to select from three different rovers: Curiosity, Opportunity, and Spirit, as well as allowing the user to adjust different rover camera configurations including Front Hazard, Rear Hazard, Mast, etc. Photos now store in localStorage for a duration of 1 hour before being removed. This will reduce the number of API calls for repeated searches on a given day.
 
 ---
-This app is hosted with Netlify.
+This app is hosted with Cyclic.
 
 ### Built With
 
