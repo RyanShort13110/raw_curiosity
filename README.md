@@ -52,8 +52,9 @@ This app is hosted with Cyclic.
 
 ### Built With
 
-
-* Vanilla JavaScript
+* Node.js
+* Express.js
+* JavaScript
 * Vanilla CSS
 * HTML
 
